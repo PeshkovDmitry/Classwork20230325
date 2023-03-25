@@ -1,7 +1,8 @@
-﻿void InputArray(int[] array) {
-    array = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+﻿int[] InputArray() {
+    int[] array = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
     // for (int i = 0; i < array.Length; i++)
     //     array[i] = new Random().Next(-9, 10); // [-9, 9] 
+    return array;
 } 
 
 bool ReleaseArray(int[] array) {
@@ -13,6 +14,5 @@ bool ReleaseArray(int[] array) {
 }
 
 Console.Clear(); 
-int[] array = new int[3]; 
-InputArray(array); 
+int[] array = InputArray(); 
 Console.WriteLine($"{ReleaseArray(array)}"); 
